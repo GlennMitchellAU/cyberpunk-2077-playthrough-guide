@@ -31,7 +31,8 @@
       'Iguana egg acquired',
       'Nibbles has been fed',
       'Andrew’s niche visited for <b>Happy Together</b>',
-      'Skippy acquired in Puppy-Loving Pacifist mode'
+      'Skippy acquired in Puppy-Loving Pacifist mode',
+      '<b>Butcher’s Cleaver</b> acquired during M’ap Tann Pèlen'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -42,21 +43,21 @@
       'Errata collected from Electric Corp'
     ],
     mainJobs: [
-      '<b>Down on the Street</b> — meet with Takemura',
-      '<b>Ghost Town</b> — go to the Afterlife',
-      '<b>M’ap Tann Pèlen</b> — keep busy until Mr. Hands calls back'
+      '<b>I Walk the Line</b> — active; infiltrate the Grand Imperial Mall, get Sasquatch’s Hammer, then side with the NetWatch agent',
+      '<b>Ghost Town</b> — Rogue is gathering intel after payment',
+      '<b>Down on the Street</b> — meet with Takemura'
     ],
     sideJobs: [
       'Epistrophy', 'Venus in Furs', 'The Beast in Me', 'Shoot to Thrill',
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
+      '<b>I Walk the Line:</b> reach the cinema, <b>fight Sasquatch</b>, and take <b>Sasquatch’s Hammer</b>. Do not sneak past her on this run.',
+      '<b>NetWatch choice:</b> hear the agent out and <b>accept his deal</b>. Placide already planted lethal malware in V, so our Corpo V treats that as the Voodoo Boys breaking the deal first.',
       '<b>Ripperdoc:</b> install <b>Electrifying Mantis Blades</b>. Your Arms slot is empty and this finally activates the other half of the build.',
       '<b>Next perk points:</b> take <b>Dash 1/2 → Dash 2/2</b>. You already have Slippery, so the path is open.',
-      '<b>Next attributes:</b> INT 13 → 14 → 15. From the actual Level 15 save, getting Overclock / Target Lock Transfer tier first is stronger than detouring to Body 4 right now.',
-      '<b>Weapon detour:</b> Wellsprings Organized Crime Activity / “Living the Big Life” for the <b>Yinglong</b> crafting spec.',
-      '<b>Quick housekeeping:</b> revisit H10 for Nibbles, then El Coyote Cojo for <b>La Chingona Dorada</b> if 24h has passed.',
-      '<b>Optional quick side job:</b> do <b>Venus in Furs</b> while it is active; it closes the Meredith branch and gives its unique Iconic.'
+      '<b>Next attributes:</b> INT 13 → 14 → 15 for Overclock / Target Lock Transfer tier.',
+      '<b>Weapon detour:</b> Wellsprings Organized Crime Activity / “Living the Big Life” for the <b>Yinglong</b> crafting spec.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip']
   };
@@ -64,7 +65,6 @@
   const esc = s => String(s);
   const list = (items, prefix='✓') => items.map(x => `<div style="margin:5px 0">${prefix} ${x}</div>`).join('');
 
-  // Add a Current V nav entry.
   const nav = document.querySelector('nav');
   if (nav && !nav.querySelector('a[href="#current"]')) {
     const first = nav.querySelector('a');
@@ -102,16 +102,14 @@
 </div>
 <div class="callout cyan searchable"><b>Main jobs currently open:</b><br>${STATE.mainJobs.join('<br>')}</div>
 <div class="callout searchable"><b>Visible side jobs:</b> ${STATE.sideJobs.join(' • ')}</div>
-<div class="footer" style="border-top:0;padding-top:0">Live state synced from screenshots: ${STATE.updated}.</div>
+<div class="footer" style="border-top:0;padding-top:0">Live state synced: ${STATE.updated}.</div>
 </section>`;
     snapshot.insertAdjacentHTML('beforebegin', section);
   }
 
-  // Clarify the old snapshot is the destination, not the current stats.
   const snapH2 = document.querySelector('#snapshot h2');
   if (snapH2) snapH2.textContent = 'Target Endgame Build';
 
-  // Adjust guidance that has already been satisfied.
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
@@ -126,7 +124,6 @@
     }
   });
 
-  // Update the attribute roadmap to the real save rather than the original theoretical order.
   const attrIntro = document.querySelector('#attributes > p.muted');
   if (attrIntro) attrIntro.innerHTML = 'Adapted to the actual Level 15 save. From <b>12 INT / 9 REF / 9 TECH / 3 BODY / 3 COOL</b>, push INT to 15 first, then take BODY 4.';
   const timeline = document.querySelector('#attributes .timeline');
@@ -134,7 +131,6 @@
     timeline.insertAdjacentHTML('afterbegin', '<div class="step searchable"><div class="lvl">CURRENT • Level 15</div><b>INT 12 / REF 9 / TECH 9 / BODY 3 / COOL 3</b></div><div class="step searchable"><div class="lvl">NEXT • Levels 16–18</div><b>INT → 15</b> — immediate priority for Overclock / Target Lock Transfer tier.</div>');
   }
 
-  // Mark the perks visible as purchased in the supplied Level 15 screenshots.
   STATE.confirmedPerks.forEach(id => {
     const box = document.querySelector(`input[data-id="${id}"]`);
     if (box && !box.checked) {
@@ -145,7 +141,6 @@
   const perkIntro = document.querySelector('#perks > p.muted');
   if (perkIntro) perkIntro.innerHTML = 'Perks visible as purchased in the supplied Level 15 screenshots are pre-checked. <b>Next perk priority: Dash 1/2 → Dash 2/2</b>, then All Things Cyber.';
 
-  // Update cyberware status chips where identifiable.
   document.querySelectorAll('.card').forEach(card => {
     const text = card.textContent || '';
     const status = card.querySelector('.status');
