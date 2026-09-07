@@ -32,7 +32,10 @@
       'Nibbles has been fed',
       'Andrew’s niche visited for <b>Happy Together</b>',
       'Skippy acquired in Puppy-Loving Pacifist mode',
-      '<b>Butcher’s Cleaver</b> acquired during M’ap Tann Pèlen'
+      '<b>Butcher’s Cleaver</b> acquired during M’ap Tann Pèlen',
+      '<b>I Walk the Line:</b> sided with the NetWatch agent',
+      '<b>Transmission</b> completed; Placide defeated and looted',
+      '<b>Songbird contacted V</b>; Phantom Liberty / Dog Eat Dog is now available'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -40,11 +43,12 @@
       'La Chingona Dorada collected from the ofrenda after 24h',
       'Brick survival status',
       'Nehan / Satori collected from Konpeki',
-      'Errata collected from Electric Corp'
+      'Errata collected from Electric Corp',
+      'Sasquatch’s Hammer collected from the Grand Imperial Mall'
     ],
     mainJobs: [
-      '<b>I Walk the Line</b> — active; infiltrate the Grand Imperial Mall, get Sasquatch’s Hammer, then side with the NetWatch agent',
-      '<b>Ghost Town</b> — Rogue is gathering intel after payment',
+      '<b>Dog Eat Dog</b> — Songbird has called; available, but hold briefly for build/Panam prep before entering Dogtown',
+      '<b>Ghost Town</b> — continue Rogue/Panam line; help Panam deal with Nash and loot Widow Maker',
       '<b>Down on the Street</b> — meet with Takemura'
     ],
     sideJobs: [
@@ -52,12 +56,12 @@
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>I Walk the Line:</b> reach the cinema, <b>fight Sasquatch</b>, and take <b>Sasquatch’s Hammer</b>. Do not sneak past her on this run.',
-      '<b>NetWatch choice:</b> hear the agent out and <b>accept his deal</b>. Placide already planted lethal malware in V, so our Corpo V treats that as the Voodoo Boys breaking the deal first.',
-      '<b>Ripperdoc:</b> install <b>Electrifying Mantis Blades</b>. Your Arms slot is empty and this finally activates the other half of the build.',
-      '<b>Next perk points:</b> take <b>Dash 1/2 → Dash 2/2</b>. You already have Slippery, so the path is open.',
-      '<b>Next attributes:</b> INT 13 → 14 → 15 for Overclock / Target Lock Transfer tier.',
-      '<b>Weapon detour:</b> Wellsprings Organized Crime Activity / “Living the Big Life” for the <b>Yinglong</b> crafting spec.'
+      '<b>Ghost Town:</b> continue Panam’s job, agree to help her go after <b>Nash</b>, and loot <b>Widow Maker</b>. This advances the Aldecaldo path we want for The Star.',
+      '<b>Ripperdoc:</b> install <b>Electrifying Mantis Blades</b>. Your Arms slot was empty in the last confirmed save.',
+      '<b>Build:</b> continue toward <b>INT 15</b>; next perk priority remains <b>Dash 1/2 → Dash 2/2</b>.',
+      '<b>Weapon detour:</b> Wellsprings Organized Crime Activity / “Living the Big Life” for the <b>Yinglong</b> crafting spec.',
+      '<b>Housekeeping:</b> revisit H10 for Nibbles and El Coyote Cojo for <b>La Chingona Dorada</b> if enough time has passed.',
+      '<b>Then Dogtown:</b> start <b>Dog Eat Dog</b>. Once you physically trigger Songbird at the stadium gate, commit to the opening sequence until Dogtown opens up after the early Lucretia My Reflection section.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip']
   };
@@ -125,10 +129,10 @@
   });
 
   const attrIntro = document.querySelector('#attributes > p.muted');
-  if (attrIntro) attrIntro.innerHTML = 'Adapted to the actual Level 15 save. From <b>12 INT / 9 REF / 9 TECH / 3 BODY / 3 COOL</b>, push INT to 15 first, then take BODY 4.';
+  if (attrIntro) attrIntro.innerHTML = 'Adapted to the last confirmed Level 15 save. From <b>12 INT / 9 REF / 9 TECH / 3 BODY / 3 COOL</b>, push INT to 15 first, then take BODY 4.';
   const timeline = document.querySelector('#attributes .timeline');
   if (timeline && !timeline.textContent.includes('CURRENT • Level 15')) {
-    timeline.insertAdjacentHTML('afterbegin', '<div class="step searchable"><div class="lvl">CURRENT • Level 15</div><b>INT 12 / REF 9 / TECH 9 / BODY 3 / COOL 3</b></div><div class="step searchable"><div class="lvl">NEXT • Levels 16–18</div><b>INT → 15</b> — immediate priority for Overclock / Target Lock Transfer tier.</div>');
+    timeline.insertAdjacentHTML('afterbegin', '<div class="step searchable"><div class="lvl">LAST CONFIRMED • Level 15</div><b>INT 12 / REF 9 / TECH 9 / BODY 3 / COOL 3</b></div><div class="step searchable"><div class="lvl">NEXT ATTRIBUTE MILESTONE</div><b>INT → 15</b> — immediate priority for Overclock / Target Lock Transfer tier.</div>');
   }
 
   STATE.confirmedPerks.forEach(id => {
