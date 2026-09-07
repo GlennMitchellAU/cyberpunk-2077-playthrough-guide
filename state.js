@@ -11,6 +11,7 @@
     loadout: [
       '<b>Skippy</b> — Puppy-Loving Pacifist mode switch project',
       '<b>Yinglong</b> — acquired; primary Smart SMG candidate',
+      '<b>Widow Maker</b> — acquired from Nash; strong Iconic Tech Precision Rifle backup',
       '<b>Black Unicorn</b> — current confirmed katana'
     ],
     cyberware: [
@@ -38,7 +39,9 @@
       '<b>Songbird contacted V</b>; Phantom Liberty / Dog Eat Dog is available',
       '<b>Yinglong</b> acquired',
       '<b>Electrifying Mantis Blades</b> equipped',
-      '<b>INT 15 / REF 9 / TECH 9 / BODY 4 / COOL 3</b>'
+      '<b>INT 15 / REF 9 / TECH 9 / BODY 4 / COOL 3</b>',
+      '<b>Ghost Town:</b> helped Panam attack Nash’s hideout; Nash defeated',
+      '<b>Widow Maker</b> acquired from Nash'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -50,8 +53,8 @@
       'Sasquatch’s Hammer collected from the Grand Imperial Mall'
     ],
     mainJobs: [
-      '<b>Dog Eat Dog</b> — available; holding briefly while Panam/build prep catches up',
-      '<b>Ghost Town</b> — continue Rogue/Panam line; help Panam deal with Nash and loot Widow Maker',
+      '<b>Ghost Town</b> — Nash is dead and Widow Maker secured; finish the remaining Panam / Sunset Motel sequence',
+      '<b>Dog Eat Dog</b> — available; now a good next major phase once Ghost Town wraps',
       '<b>Down on the Street</b> — meet with Takemura'
     ],
     sideJobs: [
@@ -59,12 +62,12 @@
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
+      '<b>Finish Ghost Town:</b> complete the Sunset Motel sequence with Panam; no major route-breaking choice remains in this job.',
       '<b>Next perk points:</b> take <b>Overclock 1/3 → 2/3 → 3/3</b>. INT 15 is now online, so this is the biggest immediate power spike.',
       '<b>Then:</b> build <b>Target Lock Transfer 1/3 → 3/3</b> to strengthen the Smart-weapon side of the hybrid.',
       '<b>Next attributes:</b> push <b>REF 10 → 15</b>. That unlocks Air Dash and Finisher: Bladerunner for the Mantis half of the build.',
-      '<b>Ghost Town:</b> help Panam go after <b>Nash</b> and loot <b>Widow Maker</b>. This keeps The Star route progressing.',
       '<b>Cyberware:</b> keep upgrading <b>Militech Paraline</b> as better tiers become available; add RAM-support cyberware when capacity allows.',
-      '<b>Then Dogtown:</b> start <b>Dog Eat Dog</b> once Ghost Town / immediate Panam prep is done. Relic points will materially improve the Mantis side.'
+      '<b>Dogtown:</b> once Ghost Town finishes, starting <b>Dog Eat Dog</b> is now well-timed. Relic points will materially improve the Mantis side.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
   };
