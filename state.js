@@ -39,13 +39,13 @@
       '<b>Butcher’s Cleaver</b> acquired during M’ap Tann Pèlen',
       '<b>I Walk the Line:</b> sided with the NetWatch agent',
       '<b>Transmission</b> completed; Placide defeated and looted',
-      '<b>Songbird contacted V</b>; Phantom Liberty / Dog Eat Dog is available',
       '<b>Yinglong</b> acquired',
       '<b>Electrifying Mantis Blades</b> equipped',
       '<b>INT 15 / REF 9 / TECH 9 / BODY 4 / COOL 3</b>',
       '<b>Ghost Town:</b> Nash defeated; <b>Widow Maker</b> acquired',
       '<b>Life During Wartime</b> completed; Hellman captured and interrogated',
-      'Post-Hellman <b>Tapeworm</b> conversation completed with Johnny'
+      'Post-Hellman <b>Tapeworm</b> conversation completed with Johnny',
+      '<b>Dog Eat Dog</b> started; V has reached the Dogtown gate and is meeting Songbird in person'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -58,7 +58,7 @@
       '<b>I’ll Fly Away</b> completed later for the missable <b>Stinger</b> Iconic before Queen of the Highway'
     ],
     mainJobs: [
-      '<b>Dog Eat Dog</b> — available and now recommended; build and base-game progression are at a very good point to enter Dogtown',
+      '<b>Dog Eat Dog</b> — ACTIVE at the Dogtown gate. First Songbird face-to-face dialogue is safe; follow her into Dogtown and continue the opening sequence.',
       '<b>Takemura line</b> — currently waiting for Takemura to contact V / advance his next step'
     ],
     sideJobs: [
@@ -66,10 +66,10 @@
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>Dogtown now:</b> start <b>Dog Eat Dog</b>. Once you physically commit at the stadium gate, stay on the Phantom Liberty opening sequence rather than wandering back to Night City.',
-      '<b>Opening checkpoint:</b> continue through Dog Eat Dog → Hole in the Sky → Spider and the Fly → early <b>Lucretia My Reflection</b>. When Mr. Hands restores gate access / you are released into free roam, Night City and Dogtown can be mixed freely again.',
-      '<b>Relic priority:</b> take <b>Jailbreak</b> first, then <b>Spatial Mapping</b> for the Mantis Blade build.',
-      '<b>Panam reminder:</b> when her next jobs arrive, continue the Aldecaldo line. After <b>Riders on the Storm</b>, visit Mitch for <b>I’ll Fly Away</b> before <b>Queen of the Highway</b> to secure <b>Stinger</b>.',
+      '<b>Dog Eat Dog:</b> dialogue with Songbird at the gate is non-breaking. Ask questions / be skeptical if desired; all of the main responses converge.',
+      '<b>Relic:</b> Songbird unlocks the Relic tree and gives <b>3 Relic Points</b>. Spend the first 3 on <b>Jailbreak</b>; take <b>Spatial Mapping</b> with the next Relic Point you find.',
+      '<b>CRITICAL opening warning:</b> once <b>Hole in the Sky</b> begins and Space Force One crashes, <b>go straight to the crash site and rescue Myers</b>. Ignoring that objective can fail the Phantom Liberty main story.',
+      '<b>Early PL stop:</b> during <b>Lucretia My Reflection</b>, do not confirm <b>“You’re right, I’m out” → “Made my decision”</b>; that can permanently end the PL main questline.',
       '<b>Next perk points:</b> <b>Overclock 1/3 → 3/3</b>, then Target Lock Transfer.',
       '<b>Next attributes:</b> push <b>REF 10 → 15</b> for Air Dash and Finisher: Bladerunner.'
     ],
@@ -77,7 +77,6 @@
   };
 
   const list = (items, prefix='✓') => items.map(x => `<div style="margin:5px 0">${prefix} ${x}</div>`).join('');
-
   const nav = document.querySelector('nav');
   if (nav && !nav.querySelector('a[href="#current"]')) {
     const first = nav.querySelector('a');
@@ -87,7 +86,7 @@
   const snapshot = document.querySelector('#snapshot');
   if (snapshot && !document.querySelector('#current')) {
     const a = STATE.attributes;
-    const section = `
+    snapshot.insertAdjacentHTML('beforebegin', `
 <section id="current">
 <h2>Current V // Live Playthrough State</h2>
 <div class="stats">
@@ -115,8 +114,7 @@
 <div class="callout cyan searchable"><b>Main jobs currently open:</b><br>${STATE.mainJobs.join('<br>')}</div>
 <div class="callout searchable"><b>Visible / remaining side jobs:</b> ${STATE.sideJobs.join(' • ')}</div>
 <div class="footer" style="border-top:0;padding-top:0">Live state synced: ${STATE.updated}. Exact current level / Street Cred / money / carry await the next screenshot; attributes are confirmed.</div>
-</section>`;
-    snapshot.insertAdjacentHTML('beforebegin', section);
+</section>`);
   }
 
   const snapH2 = document.querySelector('#snapshot h2');
@@ -125,7 +123,7 @@
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
-      el.innerHTML = '<b>Build status:</b> <b>Yinglong</b>, Smart Link, Reinforced Tendons and <b>Electrifying Mantis Blades</b> are online. Dogtown is now recommended; its Relic tree directly strengthens the Mantis half of the build.';
+      el.innerHTML = '<b>Build status:</b> <b>Yinglong</b>, Smart Link, Reinforced Tendons and <b>Electrifying Mantis Blades</b> are online. Phantom Liberty is now underway; take <b>Jailbreak</b> first in the Relic tree.';
     }
     if (t.includes('First purchase if missing: Smart Link') || t.includes('Already installed:')) {
       el.classList.remove('cyan'); el.classList.add('green');
