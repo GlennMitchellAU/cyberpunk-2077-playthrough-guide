@@ -1,7 +1,7 @@
 (() => {
   const STATE = {
     updated: '07 Sep 2026',
-    level: 19,
+    level: '≥19',
     streetCred: '≥14',
     money: 'last €$48,174',
     carry: 'last 72 / 250',
@@ -9,9 +9,11 @@
     perkPoints: '?',
     attributes: { intelligence: 15, reflexes: 9, technical: 9, body: 4, cool: 3 },
     loadout: [
-      '<b>Skippy</b> — Puppy-Loving Pacifist mode switch project',
       '<b>Yinglong</b> — acquired; primary Smart SMG candidate',
-      '<b>Widow Maker</b> — acquired from Nash; strong Iconic Tech Precision Rifle backup',
+      '<b>Electrifying Mantis Blades</b> — installed and active',
+      '<b>Widow Maker</b> — acquired from Nash',
+      '<b>Skippy</b> — Puppy-Loving Pacifist mode switch project',
+      '<b>Sir John Phallustiff</b> — acquired after Venus in Furs',
       '<b>Black Unicorn</b> — current confirmed katana'
     ],
     cyberware: [
@@ -25,7 +27,8 @@
     confirmed: [
       'Female Corpo V',
       'Judy romance route protected',
-      'Meredith survived; <b>Venus in Furs</b> is available',
+      'Meredith survived The Pickup',
+      '<b>Venus in Furs</b> completed; <b>Sir John Phallustiff</b> acquired',
       'Royce defeated; <b>Chaos</b> acquired',
       'Jackie sent to family',
       '<b>Heroes</b> completed; Jackie’s ARCH acquired',
@@ -40,9 +43,9 @@
       '<b>Yinglong</b> acquired',
       '<b>Electrifying Mantis Blades</b> equipped',
       '<b>INT 15 / REF 9 / TECH 9 / BODY 4 / COOL 3</b>',
-      '<b>Ghost Town:</b> helped Panam attack Nash’s hideout; Nash defeated',
-      '<b>Widow Maker</b> acquired from Nash',
-      '<b>Life During Wartime</b> underway; currently investigating the downed Kang Tao AV with Panam'
+      '<b>Ghost Town:</b> Nash defeated; <b>Widow Maker</b> acquired',
+      '<b>Life During Wartime</b> completed; Hellman captured and interrogated',
+      'Post-Hellman <b>Tapeworm</b> conversation completed with Johnny'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -55,21 +58,20 @@
       '<b>I’ll Fly Away</b> completed later for the missable <b>Stinger</b> Iconic before Queen of the Highway'
     ],
     mainJobs: [
-      '<b>Life During Wartime</b> — active at the downed AV; rescue Mitch, get Hellman’s location, capture Hellman',
-      '<b>Dog Eat Dog</b> — available; still safe to hold while Panam line advances',
-      '<b>Down on the Street</b> — meet with Takemura'
+      '<b>Dog Eat Dog</b> — available and now recommended; build and base-game progression are at a very good point to enter Dogtown',
+      '<b>Takemura line</b> — currently waiting for Takemura to contact V / advance his next step'
     ],
     sideJobs: [
-      'Epistrophy', 'Venus in Furs', 'The Beast in Me', 'Shoot to Thrill',
+      'Epistrophy / Delamain cars', 'The Beast in Me', 'Shoot to Thrill',
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>Life During Wartime:</b> stay with Panam and rescue Mitch. At the hostage scene, do not shoot the Kang Tao pilot; use <b>“I just want Hellman” → “I’m losing my patience”</b> to get the direct gas-station location.',
-      '<b>Panam loyalty:</b> after Scorpion’s death, be supportive; later, when Saul arrives, use the timed line <b>“It really wasn’t Panam’s fault.”</b>',
-      '<b>Missable later:</b> after Riders on the Storm, visit Mitch for <b>I’ll Fly Away</b> and complete it before Queen of the Highway to secure <b>Stinger</b>.',
-      '<b>Next perk points:</b> take <b>Overclock 1/3 → 2/3 → 3/3</b>, then Target Lock Transfer.',
-      '<b>Next attributes:</b> push <b>REF 10 → 15</b> for Air Dash and Finisher: Bladerunner.',
-      '<b>Dogtown:</b> once this Panam/Hellman sequence is wrapped, starting <b>Dog Eat Dog</b> is well-timed.'
+      '<b>Dogtown now:</b> start <b>Dog Eat Dog</b>. Once you physically commit at the stadium gate, stay on the Phantom Liberty opening sequence rather than wandering back to Night City.',
+      '<b>Opening checkpoint:</b> continue through Dog Eat Dog → Hole in the Sky → Spider and the Fly → early <b>Lucretia My Reflection</b>. When Mr. Hands restores gate access / you are released into free roam, Night City and Dogtown can be mixed freely again.',
+      '<b>Relic priority:</b> take <b>Jailbreak</b> first, then <b>Spatial Mapping</b> for the Mantis Blade build.',
+      '<b>Panam reminder:</b> when her next jobs arrive, continue the Aldecaldo line. After <b>Riders on the Storm</b>, visit Mitch for <b>I’ll Fly Away</b> before <b>Queen of the Highway</b> to secure <b>Stinger</b>.',
+      '<b>Next perk points:</b> <b>Overclock 1/3 → 3/3</b>, then Target Lock Transfer.',
+      '<b>Next attributes:</b> push <b>REF 10 → 15</b> for Air Dash and Finisher: Bladerunner.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
   };
@@ -111,8 +113,8 @@
   <div class="card warn searchable"><h3>Needs confirmation / collection</h3>${list(STATE.confirmLater,'•')}</div>
 </div>
 <div class="callout cyan searchable"><b>Main jobs currently open:</b><br>${STATE.mainJobs.join('<br>')}</div>
-<div class="callout searchable"><b>Visible side jobs:</b> ${STATE.sideJobs.join(' • ')}</div>
-<div class="footer" style="border-top:0;padding-top:0">Live state synced: ${STATE.updated}. Level 19 inferred from current attribute total; Street Cred / money / carry are last-known until next screenshot.</div>
+<div class="callout searchable"><b>Visible / remaining side jobs:</b> ${STATE.sideJobs.join(' • ')}</div>
+<div class="footer" style="border-top:0;padding-top:0">Live state synced: ${STATE.updated}. Exact current level / Street Cred / money / carry await the next screenshot; attributes are confirmed.</div>
 </section>`;
     snapshot.insertAdjacentHTML('beforebegin', section);
   }
@@ -123,7 +125,7 @@
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
-      el.innerHTML = '<b>Build status:</b> <b>Yinglong</b>, Smart Link, Reinforced Tendons and <b>Electrifying Mantis Blades</b> are all online. The next major spike is <b>Overclock</b>, followed by REF 15 for Air Dash / Bladerunner.';
+      el.innerHTML = '<b>Build status:</b> <b>Yinglong</b>, Smart Link, Reinforced Tendons and <b>Electrifying Mantis Blades</b> are online. Dogtown is now recommended; its Relic tree directly strengthens the Mantis half of the build.';
     }
     if (t.includes('First purchase if missing: Smart Link') || t.includes('Already installed:')) {
       el.classList.remove('cyan'); el.classList.add('green');
@@ -135,11 +137,7 @@
   });
 
   const attrIntro = document.querySelector('#attributes > p.muted');
-  if (attrIntro) attrIntro.innerHTML = 'Current confirmed spread: <b>15 INT / 9 REF / 9 TECH / 4 BODY / 3 COOL</b>. INT 15 and BODY 4 are complete; <b>next attribute milestone is REF 15</b>.';
-  const timeline = document.querySelector('#attributes .timeline');
-  if (timeline) {
-    timeline.insertAdjacentHTML('afterbegin', '<div class="step searchable"><div class="lvl">CURRENT • ~Level 19</div><b>INT 15 / REF 9 / TECH 9 / BODY 4 / COOL 3</b></div><div class="step searchable"><div class="lvl">NEXT • Levels 20–25</div><b>REF → 15</b> — unlock Air Dash + Finisher: Bladerunner and bring the Mantis half fully online.</div>');
-  }
+  if (attrIntro) attrIntro.innerHTML = 'Current confirmed spread: <b>15 INT / 9 REF / 9 TECH / 4 BODY / 3 COOL</b>. <b>Next attribute milestone is REF 15</b>.';
 
   STATE.confirmedPerks.forEach(id => {
     const box = document.querySelector(`input[data-id="${id}"]`);
@@ -148,6 +146,7 @@
       box.dispatchEvent(new Event('change', {bubbles:true}));
     }
   });
+
   const perkIntro = document.querySelector('#perks > p.muted');
   if (perkIntro) perkIntro.innerHTML = 'Current checked perks synced from the latest screenshot. <b>Next perk priority: Overclock 1/3 → 3/3, then Target Lock Transfer 1/3 → 3/3.</b>';
 
