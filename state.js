@@ -41,7 +41,8 @@
       '<b>Electrifying Mantis Blades</b> equipped',
       '<b>INT 15 / REF 9 / TECH 9 / BODY 4 / COOL 3</b>',
       '<b>Ghost Town:</b> helped Panam attack Nash’s hideout; Nash defeated',
-      '<b>Widow Maker</b> acquired from Nash'
+      '<b>Widow Maker</b> acquired from Nash',
+      '<b>Life During Wartime</b> underway; currently investigating the downed Kang Tao AV with Panam'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -50,11 +51,12 @@
       'Brick survival status',
       'Nehan / Satori collected from Konpeki',
       'Errata collected from Electric Corp',
-      'Sasquatch’s Hammer collected from the Grand Imperial Mall'
+      'Sasquatch’s Hammer collected from the Grand Imperial Mall',
+      '<b>I’ll Fly Away</b> completed later for the missable <b>Stinger</b> Iconic before Queen of the Highway'
     ],
     mainJobs: [
-      '<b>Ghost Town</b> — Nash is dead and Widow Maker secured; finish the remaining Panam / Sunset Motel sequence',
-      '<b>Dog Eat Dog</b> — available; now a good next major phase once Ghost Town wraps',
+      '<b>Life During Wartime</b> — active at the downed AV; rescue Mitch, get Hellman’s location, capture Hellman',
+      '<b>Dog Eat Dog</b> — available; still safe to hold while Panam line advances',
       '<b>Down on the Street</b> — meet with Takemura'
     ],
     sideJobs: [
@@ -62,12 +64,12 @@
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>Finish Ghost Town:</b> complete the Sunset Motel sequence with Panam; no major route-breaking choice remains in this job.',
-      '<b>Next perk points:</b> take <b>Overclock 1/3 → 2/3 → 3/3</b>. INT 15 is now online, so this is the biggest immediate power spike.',
-      '<b>Then:</b> build <b>Target Lock Transfer 1/3 → 3/3</b> to strengthen the Smart-weapon side of the hybrid.',
-      '<b>Next attributes:</b> push <b>REF 10 → 15</b>. That unlocks Air Dash and Finisher: Bladerunner for the Mantis half of the build.',
-      '<b>Cyberware:</b> keep upgrading <b>Militech Paraline</b> as better tiers become available; add RAM-support cyberware when capacity allows.',
-      '<b>Dogtown:</b> once Ghost Town finishes, starting <b>Dog Eat Dog</b> is now well-timed. Relic points will materially improve the Mantis side.'
+      '<b>Life During Wartime:</b> stay with Panam and rescue Mitch. At the hostage scene, do not shoot the Kang Tao pilot; use <b>“I just want Hellman” → “I’m losing my patience”</b> to get the direct gas-station location.',
+      '<b>Panam loyalty:</b> after Scorpion’s death, be supportive; later, when Saul arrives, use the timed line <b>“It really wasn’t Panam’s fault.”</b>',
+      '<b>Missable later:</b> after Riders on the Storm, visit Mitch for <b>I’ll Fly Away</b> and complete it before Queen of the Highway to secure <b>Stinger</b>.',
+      '<b>Next perk points:</b> take <b>Overclock 1/3 → 2/3 → 3/3</b>, then Target Lock Transfer.',
+      '<b>Next attributes:</b> push <b>REF 10 → 15</b> for Air Dash and Finisher: Bladerunner.',
+      '<b>Dogtown:</b> once this Panam/Hellman sequence is wrapped, starting <b>Dog Eat Dog</b> is well-timed.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
   };
