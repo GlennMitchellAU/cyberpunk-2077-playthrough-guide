@@ -12,6 +12,8 @@
       '<b>Yinglong</b> — acquired; primary Smart SMG candidate',
       '<b>Electrifying Mantis Blades</b> — installed and active',
       '<b>Widow Maker</b> — acquired from Nash',
+      '<b>Problem Solver</b> — acquired during Riders on the Storm',
+      '<b>Stinger</b> — acquired from I’ll Fly Away',
       '<b>Skippy</b> — reached the 50-maim conversation; final mode choice not yet reconfirmed',
       '<b>Sir John Phallustiff</b> — acquired after Venus in Furs',
       '<b>Black Unicorn</b> — confirmed katana'
@@ -42,9 +44,10 @@
       '<b>Ghost Town:</b> Nash defeated; <b>Widow Maker</b> acquired',
       '<b>Life During Wartime</b> completed; Hellman captured and interrogated',
       'Post-Hellman <b>Tapeworm</b> conversation completed with Johnny',
-      '<b>Phantom Liberty:</b> opening completed far enough for free movement; <b>The Damned</b> started and paused before meeting Slider',
-      '<b>Both Sides, Now</b> — Judy has called; quest available / underway',
-      '<b>Riders on the Storm</b> — now being started to rescue Saul'
+      '<b>Phantom Liberty:</b> opening completed far enough for free movement; <b>The Damned</b> paused before Slider',
+      '<b>Riders on the Storm</b> completed; <b>Problem Solver</b> acquired',
+      '<b>I’ll Fly Away</b> completed before the lockout; <b>Stinger</b> acquired',
+      '<b>With a Little Help from My Friends</b> now started'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -55,26 +58,26 @@
       'Errata collected from Electric Corp',
       'Sasquatch’s Hammer collected from the Grand Imperial Mall',
       '<b>Chimera Core</b> collected after the boss fight',
-      '<b>Problem Solver</b> looted from the Wraith boss at the front of the camp during Riders on the Storm',
-      '<b>I’ll Fly Away</b> completed immediately after Riders on the Storm for the missable <b>Stinger</b> Iconic'
+      '<b>War Pigs</b> / <b>Apparition</b> completion status',
+      '<b>Ex-Factor</b> / <b>Death and Taxes</b> completion status',
+      '<b>Gimme Danger</b> / <b>Prototype: Shingen Mark V</b> completion status'
     ],
     mainJobs: [
-      '<b>Riders on the Storm</b> — ACTIVE: rescue Saul and protect the Aldecaldo / The Star route',
-      '<b>The Damned</b> — paused before Slider; safe to return after Panam/Judy detours',
-      '<b>Both Sides, Now</b> — Judy called; safe quest, continue her chain',
-      '<b>Takemura line</b> — waiting for / following his next contact as it advances'
+      '<b>With a Little Help from My Friends</b> — ACTIVE. Protect Panam’s plan from Saul and complete the Basilisk heist to preserve Queen of the Highway / The Star.',
+      '<b>The Damned</b> — paused before Slider; safe to resume after Panam/Judy detours',
+      '<b>Gimme Danger</b> — recently started; current completion status not yet reconfirmed'
     ],
     sideJobs: [
       'Epistrophy / Delamain cars', 'The Beast in Me', 'Shoot to Thrill',
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>Riders on the Storm:</b> once started, do not abandon the mission for a long time. Rescue Saul promptly or the quest can fail and cut off the rest of Panam’s chain.',
-      '<b>MISSABLE ICONIC:</b> at the Wraith camp, kill/neutralize the large <b>Wraith Boss Hunter near the front entrance</b> and loot <b>Problem Solver</b>. Going loud is completely fine.',
-      '<b>Cabin:</b> back Panam in the argument with Saul — choose <b>“Shitty idea, Panam is right.”</b> Female V cannot romance Panam, but supporting her fits the friendship / Aldecaldo ending route.',
-      '<b>Quest reward:</b> Panam gives <b>Overwatch</b> at the end; make sure to take it.',
-      '<b>CRITICAL NEXT DETOUR:</b> immediately after Riders on the Storm, go back to the Aldecaldo camp and do Mitch’s <b>I’ll Fly Away</b> before advancing Panam too far. Reward: <b>Stinger</b>.',
-      '<b>After Panam:</b> resume <b>The Damned</b> before Slider or continue Judy as her calls/texts arrive. Next attribute goal remains <b>REF 15</b>.'
+      '<b>CRITICAL:</b> do <b>not</b> reveal Panam’s Basilisk plan to Saul. If Saul gets the plan from V, Panam’s chain ends and <b>Queen of the Highway / The Star</b> are lost.',
+      '<b>Opening:</b> stay neutral in the Panam/Saul argument, then agree to help Panam — <b>“OK, I’m in.”</b> Riding with Panam also avoids the Saul betrayal branch entirely.',
+      '<b>Control tower:</b> dialogue is mostly roleplay for female V. Avoid framing the help as purely for money; otherwise support Panam and enjoy the scene.',
+      '<b>Heist:</b> activate the locomotive, hit the convoy, and finish the operation with Panam. No must-have Iconic is tied to the normal success route.',
+      '<b>Afterward:</b> wait for <b>Queen of the Highway</b> and complete it to fully unlock the Aldecaldo / The Star ending route.',
+      '<b>Other routes:</b> resume <b>The Damned</b> before Slider and continue Judy’s chain as calls arrive. Next attribute goal remains <b>REF 15</b>.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
   };
