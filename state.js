@@ -10,6 +10,7 @@
     attributes: { intelligence: 15, reflexes: 9, technical: 9, body: 4, cool: 3 },
     loadout: [
       '<b>Yinglong</b> — acquired; primary Smart SMG candidate',
+      '<b>Prototype: Shingen Mark V</b> — acquired from container 667 during Gimme Danger; strong Smart SMG option',
       '<b>Electrifying Mantis Blades</b> — installed and active',
       '<b>Widow Maker</b> — acquired from Nash',
       '<b>Problem Solver</b> — acquired during Riders on the Storm',
@@ -49,7 +50,8 @@
       '<b>Phantom Liberty:</b> opening completed far enough for free movement; <b>The Damned</b> paused before Slider',
       '<b>Riders on the Storm</b> completed; <b>Problem Solver</b> acquired',
       '<b>I’ll Fly Away</b> completed before the lockout; <b>Stinger</b> acquired',
-      '<b>With a Little Help from My Friends</b> completed successfully; Panam is happy with V and the Aldecaldo / The Star route remains protected'
+      '<b>With a Little Help from My Friends</b> completed successfully; Panam is happy with V and the Aldecaldo / The Star route remains protected',
+      '<b>Gimme Danger</b> completed; <b>Prototype: Shingen Mark V</b> acquired from container 667'
     ],
     confirmLater: [
       'Iguana egg placed in V’s apartment',
@@ -59,25 +61,24 @@
       'Sasquatch’s Hammer collected from the Grand Imperial Mall',
       '<b>Chimera Core</b> collected after the boss fight',
       '<b>War Pigs</b> / <b>Apparition</b> completion status',
-      '<b>Ex-Factor</b> / <b>Death and Taxes</b> completion status',
-      '<b>Gimme Danger</b> / <b>Prototype: Shingen Mark V</b> completion status'
+      '<b>Ex-Factor</b> / <b>Death and Taxes</b> completion status'
     ],
     mainJobs: [
+      '<b>Play It Safe</b> — ACTIVE. Secure <b>Genjiroh</b> on the way to the second sniper and <b>Jinchu-Maru</b> from Oda; spare Oda after the fight.',
       '<b>Queen of the Highway</b> — waiting to trigger. Leave the Aldecaldo camp and pass about 24 in-game hours for Panam to call; complete it to fully unlock the Aldecaldo / The Star ending option.',
-      '<b>The Damned</b> — paused before Slider; safe to resume while waiting for Panam',
-      '<b>Gimme Danger</b> — recently started; current completion status not yet reconfirmed',
-      '<b>Judy chain</b> — continue with Talkin’ ’Bout a Revolution when her next message/call arrives; Pisces remains the major romance STOP'
+      '<b>The Damned</b> — paused before Slider; safe to resume after Takemura / Panam / Judy detours',
+      '<b>Judy chain</b> — waiting for the next call/message after Ex-Factor; Pisces remains the major romance STOP'
     ],
     sideJobs: [
       'Epistrophy / Delamain cars', 'The Beast in Me', 'Shoot to Thrill',
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>Panam:</b> leave camp and wait about <b>24 in-game hours</b> for <b>Queen of the Highway</b>. When Panam calls, prioritize it and complete the quest to lock in the Aldecaldo / The Star ending option.',
-      '<b>Judy:</b> if <b>Talkin’ ’Bout a Revolution</b> is available, do that next. Agree to help — <b>“You can count on me.”</b> Decline payment and staying the night is a good fit for the romance route.',
-      '<b>Phantom Liberty:</b> otherwise return to <b>The Damned</b> and meet Slider. His outcome is fixed, so do not waste reloads trying to save him.',
-      '<b>Takemura:</b> if <b>Play It Safe</b> appears, check the guide before pushing through it — <b>Genjiroh</b> and <b>Jinchu-Maru</b> are both on our pickup list.',
-      '<b>Housekeeping:</b> Nibbles and both La Chingona Dorada are secured. Still confirm whether the <b>iguana egg</b> has been placed in V’s apartment.',
+      '<b>Play It Safe STOP #1:</b> on floor 21, after the elevator and before climbing the ladder toward the second sniper, open the side room with code <b>2906</b> and collect <b>Genjiroh</b>.',
+      '<b>Oda:</b> defeat him and loot <b>Jinchu-Maru</b>. His mask interferes with Smart weapons, so use Cyberware Malfunction / quickhacks, Mantis Blades, or destroy the mask. When Takemura asks, <b>spare Oda</b>.',
+      '<b>NEXT QUEST CRITICAL:</b> <b>Search and Destroy</b> begins after Play It Safe. At Takemura’s hideout, <b>knock four times</b>. After the Arasaka assault, ignore the obvious exit route and <b>go back upstairs to rescue Takemura</b>.',
+      '<b>Panam:</b> when <b>Queen of the Highway</b> triggers, prioritize it and complete the quest to lock in the Aldecaldo / The Star ending option.',
+      '<b>Judy / PL:</b> continue Judy’s chain when she calls; otherwise resume <b>The Damned</b> with Slider after the Takemura sequence.',
       '<b>Build:</b> next attribute target remains <b>REF 15</b> for Air Dash + Finisher: Bladerunner.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
@@ -131,7 +132,7 @@
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
-      el.innerHTML = '<b>Build status:</b> Yinglong + Electrifying Mantis Blades are online. Panam’s route is protected; next priority is Queen of the Highway while Judy and Phantom Liberty continue in parallel.';
+      el.innerHTML = '<b>Build status:</b> Yinglong + <b>Prototype: Shingen Mark V</b> + Electrifying Mantis Blades are online. Current priority is Play It Safe, then preserving Takemura in Search and Destroy.';
     }
     if (t.includes('First purchase if missing: Smart Link') || t.includes('Already installed:')) {
       el.classList.remove('cyan'); el.classList.add('green');
