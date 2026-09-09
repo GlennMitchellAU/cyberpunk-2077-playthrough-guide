@@ -14,6 +14,7 @@
       '<b>Widow Maker</b> — acquired from Nash',
       '<b>Problem Solver</b> — acquired during Riders on the Storm',
       '<b>Stinger</b> — acquired from I’ll Fly Away',
+      '<b>La Chingona Dorada ×2</b> — collected from Jackie’s ofrenda at El Coyote Cojo',
       '<b>Skippy</b> — reached the 50-maim conversation; final mode choice not yet reconfirmed',
       '<b>Sir John Phallustiff</b> — acquired after Venus in Furs',
       '<b>Black Unicorn</b> — confirmed katana'
@@ -33,7 +34,8 @@
       'Royce defeated; <b>Chaos</b> acquired',
       'Jackie sent to family; <b>Heroes</b> completed; Jackie’s ARCH acquired',
       'Iguana egg acquired',
-      'Nibbles has been fed',
+      '<b>Nibbles adopted</b> and now living in V’s H10 apartment',
+      '<b>La Chingona Dorada ×2</b> collected from the ofrenda at El Coyote Cojo',
       'Andrew’s niche visited for <b>Happy Together</b>',
       '<b>Butcher’s Cleaver</b> acquired during M’ap Tann Pèlen',
       '<b>I Walk the Line:</b> sided with the NetWatch agent',
@@ -50,9 +52,7 @@
       '<b>With a Little Help from My Friends</b> completed successfully; Panam is happy with V and the Aldecaldo / The Star route remains protected'
     ],
     confirmLater: [
-      'Nibbles actually adopted after returning to H10',
       'Iguana egg placed in V’s apartment',
-      'La Chingona Dorada collected from the ofrenda after 24h',
       'Brick survival status',
       'Nehan / Satori collected from Konpeki',
       'Errata collected from Electric Corp',
@@ -77,7 +77,7 @@
       '<b>Judy:</b> if <b>Talkin’ ’Bout a Revolution</b> is available, do that next. Agree to help — <b>“You can count on me.”</b> Decline payment and staying the night is a good fit for the romance route.',
       '<b>Phantom Liberty:</b> otherwise return to <b>The Damned</b> and meet Slider. His outcome is fixed, so do not waste reloads trying to save him.',
       '<b>Takemura:</b> if <b>Play It Safe</b> appears, check the guide before pushing through it — <b>Genjiroh</b> and <b>Jinchu-Maru</b> are both on our pickup list.',
-      '<b>Quick housekeeping:</b> check H10 for <b>Nibbles</b> adoption and El Coyote Cojo for the two <b>La Chingona Dorada</b> pistols if you have not collected them yet.',
+      '<b>Housekeeping:</b> Nibbles and both La Chingona Dorada are secured. Still confirm whether the <b>iguana egg</b> has been placed in V’s apartment.',
       '<b>Build:</b> next attribute target remains <b>REF 15</b> for Air Dash + Finisher: Bladerunner.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
@@ -138,7 +138,8 @@
       el.innerHTML = '<b>Core cyberware online:</b> Smart Link, Reinforced Tendons and <b>Electrifying Mantis Blades</b> are confirmed installed. Keep upgrading Paraline and RAM support as tiers/capacity allow.';
     }
     if (t.includes('NIBBLES:')) {
-      el.innerHTML = '<b>NIBBLES:</b> food is already down. Adoption itself is not yet confirmed — return to H10 and check the bowl for Johnny + Nibbles.';
+      el.classList.remove('cyan'); el.classList.add('green');
+      el.innerHTML = '<b>NIBBLES:</b> adopted and confirmed living in V’s H10 apartment.';
     }
   });
 
