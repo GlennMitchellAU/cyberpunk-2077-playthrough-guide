@@ -47,7 +47,7 @@
       '<b>Phantom Liberty:</b> opening completed far enough for free movement; <b>The Damned</b> paused before Slider',
       '<b>Riders on the Storm</b> completed; <b>Problem Solver</b> acquired',
       '<b>I’ll Fly Away</b> completed before the lockout; <b>Stinger</b> acquired',
-      '<b>With a Little Help from My Friends</b> now started'
+      '<b>With a Little Help from My Friends</b> completed successfully; Panam is happy with V and the Aldecaldo / The Star route remains protected'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -63,21 +63,22 @@
       '<b>Gimme Danger</b> / <b>Prototype: Shingen Mark V</b> completion status'
     ],
     mainJobs: [
-      '<b>With a Little Help from My Friends</b> — ACTIVE. Protect Panam’s plan from Saul and complete the Basilisk heist to preserve Queen of the Highway / The Star.',
-      '<b>The Damned</b> — paused before Slider; safe to resume after Panam/Judy detours',
-      '<b>Gimme Danger</b> — recently started; current completion status not yet reconfirmed'
+      '<b>Queen of the Highway</b> — waiting to trigger. Leave the Aldecaldo camp and pass about 24 in-game hours for Panam to call; complete it to fully unlock the Aldecaldo / The Star ending option.',
+      '<b>The Damned</b> — paused before Slider; safe to resume while waiting for Panam',
+      '<b>Gimme Danger</b> — recently started; current completion status not yet reconfirmed',
+      '<b>Judy chain</b> — continue with Talkin’ ’Bout a Revolution when her next message/call arrives; Pisces remains the major romance STOP'
     ],
     sideJobs: [
       'Epistrophy / Delamain cars', 'The Beast in Me', 'Shoot to Thrill',
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>CRITICAL:</b> do <b>not</b> reveal Panam’s Basilisk plan to Saul. If Saul gets the plan from V, Panam’s chain ends and <b>Queen of the Highway / The Star</b> are lost.',
-      '<b>Opening:</b> stay neutral in the Panam/Saul argument, then agree to help Panam — <b>“OK, I’m in.”</b> Riding with Panam also avoids the Saul betrayal branch entirely.',
-      '<b>Control tower:</b> dialogue is mostly roleplay for female V. Avoid framing the help as purely for money; otherwise support Panam and enjoy the scene.',
-      '<b>Heist:</b> activate the locomotive, hit the convoy, and finish the operation with Panam. No must-have Iconic is tied to the normal success route.',
-      '<b>Afterward:</b> wait for <b>Queen of the Highway</b> and complete it to fully unlock the Aldecaldo / The Star ending route.',
-      '<b>Other routes:</b> resume <b>The Damned</b> before Slider and continue Judy’s chain as calls arrive. Next attribute goal remains <b>REF 15</b>.'
+      '<b>Panam:</b> leave camp and wait about <b>24 in-game hours</b> for <b>Queen of the Highway</b>. When Panam calls, prioritize it and complete the quest to lock in the Aldecaldo / The Star ending option.',
+      '<b>Judy:</b> if <b>Talkin’ ’Bout a Revolution</b> is available, do that next. Agree to help — <b>“You can count on me.”</b> Decline payment and staying the night is a good fit for the romance route.',
+      '<b>Phantom Liberty:</b> otherwise return to <b>The Damned</b> and meet Slider. His outcome is fixed, so do not waste reloads trying to save him.',
+      '<b>Takemura:</b> if <b>Play It Safe</b> appears, check the guide before pushing through it — <b>Genjiroh</b> and <b>Jinchu-Maru</b> are both on our pickup list.',
+      '<b>Quick housekeeping:</b> check H10 for <b>Nibbles</b> adoption and El Coyote Cojo for the two <b>La Chingona Dorada</b> pistols if you have not collected them yet.',
+      '<b>Build:</b> next attribute target remains <b>REF 15</b> for Air Dash + Finisher: Bladerunner.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
   };
@@ -130,7 +131,7 @@
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
-      el.innerHTML = '<b>Build status:</b> Yinglong + Electrifying Mantis Blades are online. Current priority is protecting the Panam chain, then returning to Phantom Liberty.';
+      el.innerHTML = '<b>Build status:</b> Yinglong + Electrifying Mantis Blades are online. Panam’s route is protected; next priority is Queen of the Highway while Judy and Phantom Liberty continue in parallel.';
     }
     if (t.includes('First purchase if missing: Smart Link') || t.includes('Already installed:')) {
       el.classList.remove('cyan'); el.classList.add('green');
