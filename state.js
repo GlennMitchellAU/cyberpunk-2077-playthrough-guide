@@ -1,6 +1,6 @@
 (() => {
   const STATE = {
-    updated: '07 Sep 2026',
+    updated: '09 Sep 2026',
     level: '≥19',
     streetCred: '≥14',
     money: 'last €$48,174',
@@ -12,9 +12,9 @@
       '<b>Yinglong</b> — acquired; primary Smart SMG candidate',
       '<b>Electrifying Mantis Blades</b> — installed and active',
       '<b>Widow Maker</b> — acquired from Nash',
-      '<b>Skippy</b> — Puppy-Loving Pacifist mode switch project',
+      '<b>Skippy</b> — reached the 50-maim conversation; final mode choice not yet reconfirmed',
       '<b>Sir John Phallustiff</b> — acquired after Venus in Furs',
-      '<b>Black Unicorn</b> — current confirmed katana'
+      '<b>Black Unicorn</b> — confirmed katana'
     ],
     cyberware: [
       '<b>Militech Paraline</b> — installed OS',
@@ -27,15 +27,12 @@
     confirmed: [
       'Female Corpo V',
       'Judy romance route protected',
-      'Meredith survived The Pickup',
-      '<b>Venus in Furs</b> completed; <b>Sir John Phallustiff</b> acquired',
+      'Meredith survived The Pickup; <b>Venus in Furs</b> completed; <b>Sir John Phallustiff</b> acquired',
       'Royce defeated; <b>Chaos</b> acquired',
-      'Jackie sent to family',
-      '<b>Heroes</b> completed; Jackie’s ARCH acquired',
+      'Jackie sent to family; <b>Heroes</b> completed; Jackie’s ARCH acquired',
       'Iguana egg acquired',
       'Nibbles has been fed',
       'Andrew’s niche visited for <b>Happy Together</b>',
-      'Skippy acquired in Puppy-Loving Pacifist mode',
       '<b>Butcher’s Cleaver</b> acquired during M’ap Tann Pèlen',
       '<b>I Walk the Line:</b> sided with the NetWatch agent',
       '<b>Transmission</b> completed; Placide defeated and looted',
@@ -45,7 +42,9 @@
       '<b>Ghost Town:</b> Nash defeated; <b>Widow Maker</b> acquired',
       '<b>Life During Wartime</b> completed; Hellman captured and interrogated',
       'Post-Hellman <b>Tapeworm</b> conversation completed with Johnny',
-      '<b>Dog Eat Dog</b> started; V has reached the Dogtown gate and is meeting Songbird in person'
+      '<b>Phantom Liberty:</b> opening completed far enough for free movement; <b>The Damned</b> started and paused before meeting Slider',
+      '<b>Both Sides, Now</b> — Judy has called; quest available / underway',
+      '<b>Riders on the Storm</b> — now being started to rescue Saul'
     ],
     confirmLater: [
       'Nibbles actually adopted after returning to H10',
@@ -55,28 +54,33 @@
       'Nehan / Satori collected from Konpeki',
       'Errata collected from Electric Corp',
       'Sasquatch’s Hammer collected from the Grand Imperial Mall',
-      '<b>I’ll Fly Away</b> completed later for the missable <b>Stinger</b> Iconic before Queen of the Highway'
+      '<b>Chimera Core</b> collected after the boss fight',
+      '<b>Problem Solver</b> looted from the Wraith boss at the front of the camp during Riders on the Storm',
+      '<b>I’ll Fly Away</b> completed immediately after Riders on the Storm for the missable <b>Stinger</b> Iconic'
     ],
     mainJobs: [
-      '<b>Dog Eat Dog</b> — ACTIVE at the Dogtown gate. First Songbird face-to-face dialogue is safe; follow her into Dogtown and continue the opening sequence.',
-      '<b>Takemura line</b> — currently waiting for Takemura to contact V / advance his next step'
+      '<b>Riders on the Storm</b> — ACTIVE: rescue Saul and protect the Aldecaldo / The Star route',
+      '<b>The Damned</b> — paused before Slider; safe to return after Panam/Judy detours',
+      '<b>Both Sides, Now</b> — Judy called; safe quest, continue her chain',
+      '<b>Takemura line</b> — waiting for / following his next contact as it advances'
     ],
     sideJobs: [
       'Epistrophy / Delamain cars', 'The Beast in Me', 'Shoot to Thrill',
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>Dog Eat Dog:</b> dialogue with Songbird at the gate is non-breaking. Ask questions / be skeptical if desired; all of the main responses converge.',
-      '<b>Relic:</b> Songbird unlocks the Relic tree and gives <b>3 Relic Points</b>. Spend the first 3 on <b>Jailbreak</b>; take <b>Spatial Mapping</b> with the next Relic Point you find.',
-      '<b>CRITICAL opening warning:</b> once <b>Hole in the Sky</b> begins and Space Force One crashes, <b>go straight to the crash site and rescue Myers</b>. Ignoring that objective can fail the Phantom Liberty main story.',
-      '<b>Early PL stop:</b> during <b>Lucretia My Reflection</b>, do not confirm <b>“You’re right, I’m out” → “Made my decision”</b>; that can permanently end the PL main questline.',
-      '<b>Next perk points:</b> <b>Overclock 1/3 → 3/3</b>, then Target Lock Transfer.',
-      '<b>Next attributes:</b> push <b>REF 10 → 15</b> for Air Dash and Finisher: Bladerunner.'
+      '<b>Riders on the Storm:</b> once started, do not abandon the mission for a long time. Rescue Saul promptly or the quest can fail and cut off the rest of Panam’s chain.',
+      '<b>MISSABLE ICONIC:</b> at the Wraith camp, kill/neutralize the large <b>Wraith Boss Hunter near the front entrance</b> and loot <b>Problem Solver</b>. Going loud is completely fine.',
+      '<b>Cabin:</b> back Panam in the argument with Saul — choose <b>“Shitty idea, Panam is right.”</b> Female V cannot romance Panam, but supporting her fits the friendship / Aldecaldo ending route.',
+      '<b>Quest reward:</b> Panam gives <b>Overwatch</b> at the end; make sure to take it.',
+      '<b>CRITICAL NEXT DETOUR:</b> immediately after Riders on the Storm, go back to the Aldecaldo camp and do Mitch’s <b>I’ll Fly Away</b> before advancing Panam too far. Reward: <b>Stinger</b>.',
+      '<b>After Panam:</b> resume <b>The Damned</b> before Slider or continue Judy as her calls/texts arrive. Next attribute goal remains <b>REF 15</b>.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
   };
 
   const list = (items, prefix='✓') => items.map(x => `<div style="margin:5px 0">${prefix} ${x}</div>`).join('');
+
   const nav = document.querySelector('nav');
   if (nav && !nav.querySelector('a[href="#current"]')) {
     const first = nav.querySelector('a');
@@ -123,7 +127,7 @@
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
-      el.innerHTML = '<b>Build status:</b> <b>Yinglong</b>, Smart Link, Reinforced Tendons and <b>Electrifying Mantis Blades</b> are online. Phantom Liberty is now underway; take <b>Jailbreak</b> first in the Relic tree.';
+      el.innerHTML = '<b>Build status:</b> Yinglong + Electrifying Mantis Blades are online. Current priority is protecting the Panam chain, then returning to Phantom Liberty.';
     }
     if (t.includes('First purchase if missing: Smart Link') || t.includes('Already installed:')) {
       el.classList.remove('cyan'); el.classList.add('green');
