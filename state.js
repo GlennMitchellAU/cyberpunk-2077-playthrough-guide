@@ -12,6 +12,8 @@
       '<b>Yinglong</b> — acquired; primary Smart SMG candidate',
       '<b>Prototype: Shingen Mark V</b> — acquired from container 667 during Gimme Danger',
       '<b>Electrifying Mantis Blades</b> — installed and active',
+      '<b>Gris-Gris</b> — acquired from Slider’s hideout using the Treating Symptoms storage key',
+      '<b>Tsumetogi</b> — acquired during Pisces',
       '<b>Widow Maker</b> — acquired from Nash',
       '<b>Problem Solver</b> — acquired during Riders on the Storm',
       '<b>Stinger</b> — acquired from I’ll Fly Away',
@@ -52,8 +54,9 @@
       '<b>With a Little Help from My Friends</b> completed successfully; Panam is happy with V and The Star route remains protected',
       '<b>Gimme Danger</b> completed; <b>Prototype: Shingen Mark V</b> acquired',
       '<b>Play It Safe</b> and <b>Search and Destroy</b> progressed through Hanako’s proxy motel visit; Takemura survived and split up with V',
-      '<b>Judy</b> and <b>Panam</b> have both called with their next quests available',
-      '<b>Phantom Liberty:</b> <b>The Damned</b> is active at the meeting point near Slider’s hideout'
+      '<b>Phantom Liberty:</b> Slider’s storage room opened and <b>Gris-Gris</b> acquired during The Damned',
+      '<b>Pisces</b> completed with Judy romance route protected; <b>Tsumetogi</b> acquired',
+      '<b>Panam:</b> Queen of the Highway is available now'
     ],
     confirmLater: [
       'Iguana egg placed in V’s apartment',
@@ -65,12 +68,12 @@
       '<b>War Pigs</b> / <b>Apparition</b> completion status',
       '<b>Ex-Factor</b> / <b>Death and Taxes</b> completion status',
       '<b>Play It Safe:</b> confirm <b>Genjiroh</b>, <b>Jinchu-Maru</b> and Oda spared',
-      '<b>Treating Symptoms:</b> confirm Slider storage key, <b>Ogou</b> and final Alan/Milko outcome'
+      '<b>Treating Symptoms:</b> confirm <b>Ogou</b> and final Alan/Milko outcome'
     ],
     mainJobs: [
-      '<b>The Damned</b> — ACTIVE at Slider’s hideout meeting point. No ending/route-locking dialogue here. Use the Treating Symptoms storage key now to collect <b>Gris-Gris</b> from the upper level of the central server room if you have it.',
-      '<b>Judy chain</b> — Judy has called; continue <b>Talkin’ ’Bout a Revolution</b> soon. <b>Pisces</b> remains the major romance STOP.',
-      '<b>Queen of the Highway</b> — Panam has called; complete it to fully secure The Star ending option.',
+      '<b>Queen of the Highway</b> — NEXT. Complete Panam’s final side job to fully unlock the Aldecaldo / <b>The Star</b> ending option.',
+      '<b>Judy chain</b> — <b>Pisces complete</b>; wait for <b>Pyramid Song</b>. That is the final Judy romance lock-in quest.',
+      '<b>The Damned</b> — <b>Gris-Gris acquired</b>; continue the Slider sequence when ready. Slider’s fate is fixed.',
       '<b>Base story</b> — post Search and Destroy. Do <b>not</b> enter Embers yet. <b>Chippin’ In</b> has an oil-field dialogue STOP for the secret ending.'
     ],
     sideJobs: [
@@ -78,11 +81,11 @@
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>The Damned:</b> choose any infiltration approach. “Let’s just chat ’em up” is the least aggressive roleplay option; combat/vent choices do not change the story outcome.',
-      '<b>GRIS-GRIS STOP:</b> in the central server room, climb to the upper level and use <b>Slider’s Hideout Storage Room Key</b> from Treating Symptoms to open the side room and collect <b>Gris-Gris</b>.',
-      '<b>Slider:</b> let the connection sequence play out. His outcome is fixed; the urgent/timed dialogue options do not change it, so do not reload trying to save him.',
-      '<b>Judy:</b> do <b>Talkin’ ’Bout a Revolution</b> soon. Agree to help, decline payment, reassure her after the Relic episode and stay the night.',
-      '<b>Panam:</b> do <b>Queen of the Highway</b> soon after; completing it secures The Star route.',
+      '<b>Queen of the Highway:</b> meet Panam and help test the Basilisk. As Female V, Panam’s romance prompts are unavailable, so normal supportive/friendly dialogue is safe.',
+      '<b>Basilisk:</b> complete the driving/calibration and target practice, then use the Basilisk to defeat the Raffen Shiv attack.',
+      '<b>Panam:</b> after the battle, return to camp and follow the conversations through to the end. There is no dialogue choice that can block The Star once the quest is completed.',
+      '<b>ENDING ROUTE:</b> completing Queen of the Highway fully unlocks the Aldecaldo / <b>The Star</b> option for Nocturne OP55N1 later.',
+      '<b>Judy:</b> when <b>Pyramid Song</b> triggers, prioritize it and stop for the romance dialogue guide before the underwater sequence / final scene.',
       '<b>Future STOP:</b> check the guide before the oil-field conversation in <b>Chippin’ In</b>. Do not enter Embers yet.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
@@ -136,7 +139,7 @@
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
-      el.innerHTML = '<b>Build status:</b> Yinglong + <b>Prototype: Shingen Mark V</b> + Electrifying Mantis Blades are online. <b>The Damned</b> is active; Judy and Panam have both called.';
+      el.innerHTML = '<b>Build status:</b> Yinglong + <b>Prototype: Shingen Mark V</b> + Electrifying Mantis Blades are online. <b>Pisces</b> is complete with Tsumetogi secured; next priority is <b>Queen of the Highway</b>.';
     }
     if (t.includes('First purchase if missing: Smart Link') || t.includes('Already installed:')) {
       el.classList.remove('cyan'); el.classList.add('green');
