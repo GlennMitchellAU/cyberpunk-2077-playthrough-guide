@@ -17,7 +17,11 @@ html,body{margin:0;min-height:100%;background:#070a0d;color:#e9f5f5;font:15px/1.
     const r=await fetch(base,{cache:'no-store'});
     if(!r.ok) throw new Error('HTTP '+r.status);
     let html=await r.text();
-    html=html.replace('</body>','<script src="state.js?v=20260907-1"><\\/script></body>');
+    // The historical guide is only the visual/template shell. All mutable playthrough
+    // state is rendered by state.js. Cache-bust it on every page load so a newly
+    // pushed checkpoint cannot be hidden behind an old browser/CDN copy.
+    const stateUrl='state.js?v='+Date.now();
+    html=html.replace('</body>','<script src="'+stateUrl+'"><\\/script></body>');
     document.open();document.write(html);document.close();
   }catch(e){
     document.getElementById('boot').innerHTML='<div><b class="err">SYNC FAILED</b><small>'+String(e)+'</small><small><a style="color:#00f0ff" href="https://github.com/GlennMitchellAU/cyberpunk-2077-playthrough-guide">Open repository</a></small></div>';
