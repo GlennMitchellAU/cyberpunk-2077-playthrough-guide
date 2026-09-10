@@ -1,6 +1,6 @@
 (() => {
   const STATE = {
-    updated: '09 Sep 2026',
+    updated: '10 Sep 2026',
     level: '≥19',
     streetCred: '≥14',
     money: 'last €$48,174',
@@ -47,11 +47,13 @@
       '<b>Ghost Town:</b> Nash defeated; <b>Widow Maker</b> acquired',
       '<b>Life During Wartime</b> completed; Hellman captured and interrogated',
       'Post-Hellman <b>Tapeworm</b> conversation completed with Johnny',
-      '<b>Phantom Liberty:</b> opening completed far enough for free movement; <b>The Damned</b> paused before Slider',
       '<b>Riders on the Storm</b> completed; <b>Problem Solver</b> acquired',
       '<b>I’ll Fly Away</b> completed before the lockout; <b>Stinger</b> acquired',
-      '<b>With a Little Help from My Friends</b> completed successfully; Panam is happy with V and the Aldecaldo / The Star route remains protected',
-      '<b>Gimme Danger</b> completed; <b>Prototype: Shingen Mark V</b> acquired from container 667'
+      '<b>With a Little Help from My Friends</b> completed successfully; Panam is happy with V and The Star route remains protected',
+      '<b>Gimme Danger</b> completed; <b>Prototype: Shingen Mark V</b> acquired',
+      '<b>Play It Safe</b> and <b>Search and Destroy</b> progressed through to Hanako’s proxy motel visit; Takemura survived and split up with V',
+      '<b>Phantom Liberty:</b> <b>The Damned</b> remains paused before Slider',
+      '<b>Judy</b> and <b>Panam</b> have both called with their next quests available'
     ],
     confirmLater: [
       'Iguana egg placed in V’s apartment',
@@ -61,25 +63,27 @@
       'Sasquatch’s Hammer collected from the Grand Imperial Mall',
       '<b>Chimera Core</b> collected after the boss fight',
       '<b>War Pigs</b> / <b>Apparition</b> completion status',
-      '<b>Ex-Factor</b> / <b>Death and Taxes</b> completion status'
+      '<b>Ex-Factor</b> / <b>Death and Taxes</b> completion status',
+      '<b>Genjiroh</b> collected during Play It Safe',
+      '<b>Jinchu-Maru</b> looted from Oda'
     ],
     mainJobs: [
-      '<b>Play It Safe</b> — ACTIVE. Secure <b>Genjiroh</b> on the way to the second sniper and <b>Jinchu-Maru</b> from Oda; spare Oda after the fight.',
-      '<b>Queen of the Highway</b> — waiting to trigger. Leave the Aldecaldo camp and pass about 24 in-game hours for Panam to call; complete it to fully unlock the Aldecaldo / The Star ending option.',
-      '<b>The Damned</b> — paused before Slider; safe to resume after Takemura / Panam / Judy detours',
-      '<b>Judy chain</b> — waiting for the next call/message after Ex-Factor; Pisces remains the major romance STOP'
+      '<b>Treating Symptoms</b> — ACTIVE in Dogtown. Collect <b>Slider’s Hideout Storage Room Key</b> and the Iconic Smart pistol <b>Ogou</b>.',
+      '<b>Judy chain</b> — next call has arrived; continue toward Pisces / Pyramid Song. Pisces remains the major romance STOP.',
+      '<b>Queen of the Highway</b> — Panam has called; complete it to fully secure The Star ending option.',
+      '<b>The Damned</b> — paused before Slider; return with the storage-room key to collect <b>Gris-Gris</b>.'
     ],
     sideJobs: [
-      'Epistrophy / Delamain cars', 'The Beast in Me', 'Shoot to Thrill',
+      'Treating Symptoms', 'Epistrophy / Delamain cars', 'The Beast in Me', 'Shoot to Thrill',
       'Big in Japan', 'Fool on the Hill', 'Beat on the Brat', 'Psycho Killer', 'Paid in Full'
     ],
     nextActions: [
-      '<b>Play It Safe STOP #1:</b> on floor 21, after the elevator and before climbing the ladder toward the second sniper, open the side room with code <b>2906</b> and collect <b>Genjiroh</b>.',
-      '<b>Oda:</b> defeat him and loot <b>Jinchu-Maru</b>. His mask interferes with Smart weapons, so use Cyberware Malfunction / quickhacks, Mantis Blades, or destroy the mask. When Takemura asks, <b>spare Oda</b>.',
-      '<b>NEXT QUEST CRITICAL:</b> <b>Search and Destroy</b> begins after Play It Safe. At Takemura’s hideout, <b>knock four times</b>. After the Arasaka assault, ignore the obvious exit route and <b>go back upstairs to rescue Takemura</b>.',
-      '<b>Panam:</b> when <b>Queen of the Highway</b> triggers, prioritize it and complete the quest to lock in the Aldecaldo / The Star ending option.',
-      '<b>Judy / PL:</b> continue Judy’s chain when she calls; otherwise resume <b>The Damned</b> with Slider after the Takemura sequence.',
-      '<b>Build:</b> next attribute target remains <b>REF 15</b> for Air Dash + Finisher: Bladerunner.'
+      '<b>Treating Symptoms STOP #1:</b> in the large ground-floor room with lion statues and overgrown computer equipment, enter the small glass-walled office and collect <b>Slider’s Hideout Storage Room Key</b> beside the terminal. This unlocks <b>Gris-Gris</b> during The Damned.',
+      '<b>Treating Symptoms STOP #2:</b> after defeating <b>Robot R Mk.2</b>, loot the Iconic Smart pistol <b>Ogou</b> from the boss.',
+      '<b>Milko choice:</b> when NetWatch agent Alan Noël asks to continue his operation, the better outcome is to <b>let him finish</b>. Indira remains protected and V can receive bonus eddies later; killing Milko gives no unique reward.',
+      '<b>Judy:</b> prioritize her next quest after this gig; <b>Pisces</b> is the important romance decision point, so stop before the Maiko choice.',
+      '<b>Panam:</b> complete <b>Queen of the Highway</b> when convenient to fully lock in The Star ending route.',
+      '<b>Phantom Liberty:</b> then return to <b>The Damned</b> before Slider and use the new key to collect <b>Gris-Gris</b> from the upper storage room.'
     ],
     confirmedPerks: ['opt','prox','eye','hq1','hq2','acq1','acq2','emb1','emb2','spec','prec','rec','data','noesc','slip','dash1','dash2','atc1','atc2','pain']
   };
@@ -132,7 +136,7 @@
   document.querySelectorAll('.callout').forEach(el => {
     const t = el.textContent || '';
     if (t.includes('Best side-job detours right now')) {
-      el.innerHTML = '<b>Build status:</b> Yinglong + <b>Prototype: Shingen Mark V</b> + Electrifying Mantis Blades are online. Current priority is Play It Safe, then preserving Takemura in Search and Destroy.';
+      el.innerHTML = '<b>Build status:</b> Yinglong + <b>Prototype: Shingen Mark V</b> + Electrifying Mantis Blades are online. Current Dogtown priority: Treating Symptoms for <b>Ogou</b> and the <b>Gris-Gris</b> key.';
     }
     if (t.includes('First purchase if missing: Smart Link') || t.includes('Already installed:')) {
       el.classList.remove('cyan'); el.classList.add('green');
